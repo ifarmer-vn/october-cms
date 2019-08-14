@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/varianttypes",
+      "handler": "Varianttypes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/varianttypes/count",
+      "handler": "Varianttypes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/varianttypes/:_id",
+      "handler": "Varianttypes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/varianttypes",
+      "handler": "Varianttypes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/varianttypes/:_id",
+      "handler": "Varianttypes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/varianttypes/:_id",
+      "handler": "Varianttypes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

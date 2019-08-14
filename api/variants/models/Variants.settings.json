@@ -1,0 +1,88 @@
+{
+  "connection": "default",
+  "collectionName": "variants",
+  "info": {
+    "name": "variants",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "url": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "default": {
+      "type": "boolean"
+    },
+    "disable": {
+      "type": "boolean"
+    },
+    "extraTitle": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "images": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "product": {
+      "type": "string"
+    },
+    "variantTypes": {
+      "type": "json"
+    },
+    "description": {
+      "type": "text"
+    },
+    "impression": {
+      "type": "integer"
+    },
+    "click": {
+      "type": "integer"
+    },
+    "ctr": {
+      "type": "float"
+    },
+    "original_price": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "json"
+    },
+    "position": {
+      "type": "float"
+    },
+    "title": {
+      "type": "string"
+    },
+    "search_volume": {
+      "type": "integer"
+    },
+    "robots": {
+      "default": "index,follow",
+      "enum": [
+        "index,follow",
+        "noindex,nofollow"
+      ],
+      "type": "enumeration"
+    },
+    "redirect": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "connection": "default",
+  "collectionName": "categories",
+  "info": {
+    "name": "categories",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "disable": {
+      "type": "boolean"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "robots": {
+      "default": "index,follow",
+      "enum": [
+        "index,follow",
+        "noindex,nofollow",
+        ""
+      ],
+      "type": "enumeration"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "search_volume": {
+      "type": "integer",
+      "default": "0"
+    },
+    "click": {
+      "type": "integer"
+    },
+    "ctr": {
+      "type": "float"
+    },
+    "impression": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "text"
+    },
+    "redirect": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "json"
+    },
+    "position": {
+      "type": "float"
+    },
+    "url": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

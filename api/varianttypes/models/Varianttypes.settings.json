@@ -1,0 +1,32 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "varianttypes",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "disable": {
+      "type": "boolean"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "show_name": {
+      "default": true,
+      "type": "boolean"
+    },
+    "children": {
+      "type": "json"
+    }
+  }
+}
