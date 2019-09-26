@@ -46,12 +46,6 @@
     "description": {
       "type": "text"
     },
-    "impression": {
-      "type": "integer"
-    },
-    "click": {
-      "type": "integer"
-    },
     "ctr": {
       "type": "float"
     },
@@ -83,6 +77,12 @@
     },
     "redirect": {
       "type": "string"
+    },
+    "clicks": {
+      "type": "integer"
+    },
+    "impressions": {
+      "type": "integer"
     }
   }
 }

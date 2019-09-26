@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/products": {
+    "/pages": {
       "get": {
         "deprecated": false,
-        "description": "Find all the products's records",
+        "description": "Find all the pages's records",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Products"
+                    "$ref": "#/components/schemas/Pages"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Pages"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new products record",
+        "description": "Create a new pages record",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Products"
+                  "$ref": "#/components/schemas/Pages"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Pages"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProducts"
+                "$ref": "#/components/schemas/NewPages"
               }
             }
           }
         }
       }
     },
-    "/products/count": {
+    "/pages/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of products documents",
+        "description": "Retrieve the numver of pages documents",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Pages"
         ],
         "parameters": []
       }
     },
-    "/products/{_id}": {
+    "/pages/{_id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one products record",
+        "description": "Find one pages record",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Products"
+                  "$ref": "#/components/schemas/Pages"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Pages"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single products record",
+        "description": "Update a single pages record",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve pages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Products"
+                  "$ref": "#/components/schemas/Pages"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Pages"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProducts"
+                "$ref": "#/components/schemas/NewPages"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single products record",
+        "description": "Delete a single pages record",
         "responses": {
           "200": {
-            "description": "deletes a single products based on the ID supplied",
+            "description": "deletes a single pages based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Pages"
         ],
         "parameters": [
           {
@@ -508,34 +508,22 @@
   },
   "components": {
     "schemas": {
-      "Products": {
+      "Pages": {
         "required": [
-          "id",
-          "url"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
+          "disable": {
+            "type": "boolean"
+          },
           "url": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "title": {
             "type": "string"
-          },
-          "robots": {
-            "type": "string",
-            "default": "index,follow",
-            "enum": [
-              "index,follow",
-              "noindex,follow"
-            ]
           },
           "images": {
             "required": [
@@ -583,62 +571,45 @@
               }
             }
           },
-          "search_volume": {
-            "type": "integer"
-          },
-          "ctr": {
-            "type": "integer"
-          },
-          "disable": {
-            "type": "boolean"
-          },
-          "price": {
-            "type": "number"
-          },
-          "original_price": {
-            "type": "number"
+          "robots": {
+            "type": "string",
+            "enum": [
+              "index,follow",
+              "noindex,follow"
+            ]
           },
           "content": {
             "type": "string"
           },
-          "specs": {
-            "type": "json"
-          },
-          "unit": {
+          "description": {
             "type": "string"
           },
-          "related_products": {
-            "type": "json"
-          },
-          "related_articles": {
-            "type": "json"
+          "heading": {
+            "type": "string"
           },
           "redirect": {
             "type": "string"
           },
-          "category": {
-            "type": "string"
+          "search_volume": {
+            "type": "integer"
           },
           "clicks": {
             "type": "integer"
+          },
+          "ctr": {
+            "type": "number"
           },
           "impressions": {
             "type": "integer"
           }
         }
       },
-      "NewProducts": {
-        "required": [
-          "url"
-        ],
+      "NewPages": {
         "properties": {
+          "disable": {
+            "type": "boolean"
+          },
           "url": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "title": {
@@ -646,50 +617,31 @@
           },
           "robots": {
             "type": "string",
-            "default": "index,follow",
             "enum": [
               "index,follow",
               "noindex,follow"
             ]
           },
-          "search_volume": {
-            "type": "integer"
-          },
-          "ctr": {
-            "type": "integer"
-          },
-          "disable": {
-            "type": "boolean"
-          },
-          "price": {
-            "type": "number"
-          },
-          "original_price": {
-            "type": "number"
-          },
           "content": {
             "type": "string"
           },
-          "specs": {
-            "type": "json"
-          },
-          "unit": {
+          "description": {
             "type": "string"
           },
-          "related_products": {
-            "type": "json"
-          },
-          "related_articles": {
-            "type": "json"
+          "heading": {
+            "type": "string"
           },
           "redirect": {
             "type": "string"
           },
-          "category": {
-            "type": "string"
+          "search_volume": {
+            "type": "integer"
           },
           "clicks": {
             "type": "integer"
+          },
+          "ctr": {
+            "type": "number"
           },
           "impressions": {
             "type": "integer"
@@ -700,7 +652,7 @@
   },
   "tags": [
     {
-      "name": "Products"
+      "name": "Pages"
     }
   ]
 }

@@ -39,14 +39,8 @@
       "type": "integer",
       "default": "0"
     },
-    "click": {
-      "type": "integer"
-    },
     "ctr": {
       "type": "float"
-    },
-    "impression": {
-      "type": "integer"
     },
     "content": {
       "type": "text"
@@ -70,6 +64,12 @@
     },
     "name": {
       "type": "string"
+    },
+    "clicks": {
+      "type": "integer"
+    },
+    "impressions": {
+      "type": "integer"
     }
   }
 }

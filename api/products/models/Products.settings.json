@@ -42,13 +42,7 @@
     "search_volume": {
       "type": "integer"
     },
-    "click": {
-      "type": "integer"
-    },
     "ctr": {
-      "type": "integer"
-    },
-    "impression": {
       "type": "integer"
     },
     "disable": {
@@ -80,6 +74,12 @@
     },
     "category": {
       "type": "string"
+    },
+    "clicks": {
+      "type": "integer"
+    },
+    "impressions": {
+      "type": "integer"
     }
   }
 }

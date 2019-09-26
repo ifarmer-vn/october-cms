@@ -586,14 +586,8 @@
           "search_volume": {
             "type": "integer"
           },
-          "click": {
-            "type": "integer"
-          },
           "ctr": {
             "type": "number"
-          },
-          "impression": {
-            "type": "integer"
           },
           "name": {
             "type": "string"
@@ -615,6 +609,12 @@
           },
           "redirect": {
             "type": "string"
+          },
+          "clicks": {
+            "type": "integer"
+          },
+          "impressions": {
+            "type": "integer"
           }
         }
       },
@@ -643,14 +643,8 @@
           "search_volume": {
             "type": "integer"
           },
-          "click": {
-            "type": "integer"
-          },
           "ctr": {
             "type": "number"
-          },
-          "impression": {
-            "type": "integer"
           },
           "name": {
             "type": "string"
@@ -672,6 +666,12 @@
           },
           "redirect": {
             "type": "string"
+          },
+          "clicks": {
+            "type": "integer"
+          },
+          "impressions": {
+            "type": "integer"
           }
         }
       }

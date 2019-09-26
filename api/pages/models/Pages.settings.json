@@ -1,9 +1,9 @@
 {
   "connection": "default",
-  "collectionName": "article_categories",
+  "collectionName": "pages",
   "info": {
-    "name": "articlecategories",
-    "description": ""
+    "name": "pages",
+    "description": "22222"
   },
   "options": {
     "timestamps": [
@@ -16,34 +16,22 @@
       "type": "boolean"
     },
     "url": {
-      "unique": true,
-      "required": true,
       "type": "string"
     },
     "title": {
       "type": "string"
     },
     "images": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "plugin": "upload"
     },
     "robots": {
       "enum": [
         "index,follow",
-        "noindex,nofollow"
+        "noindex,follow"
       ],
-      "type": "enumeration",
-      "default": "index,follow"
-    },
-    "search_volume": {
-      "type": "integer"
-    },
-    "ctr": {
-      "type": "float"
-    },
-    "name": {
-      "type": "string"
+      "type": "enumeration"
     },
     "content": {
       "type": "text"
@@ -54,17 +42,17 @@
     "heading": {
       "type": "string"
     },
-    "keywords": {
-      "type": "json"
-    },
-    "position": {
-      "type": "float"
-    },
     "redirect": {
       "type": "string"
     },
+    "search_volume": {
+      "type": "integer"
+    },
     "clicks": {
       "type": "integer"
+    },
+    "ctr": {
+      "type": "float"
     },
     "impressions": {
       "type": "integer"

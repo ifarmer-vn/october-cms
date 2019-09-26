@@ -1,40 +1,30 @@
 {
   "connection": "default",
-  "collectionName": "article_categories",
+  "collectionName": "",
   "info": {
-    "name": "articlecategories",
+    "name": "contents",
     "description": ""
   },
   "options": {
-    "timestamps": [
-      "createdAt",
-      "updatedAt"
-    ]
+    "timestamps": true
   },
   "attributes": {
+    "url": {
+      "type": "string"
+    },
     "disable": {
       "type": "boolean"
-    },
-    "url": {
-      "unique": true,
-      "required": true,
-      "type": "string"
     },
     "title": {
       "type": "string"
     },
     "images": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "plugin": "upload"
     },
     "robots": {
-      "enum": [
-        "index,follow",
-        "noindex,nofollow"
-      ],
-      "type": "enumeration",
-      "default": "index,follow"
+      "type": "string"
     },
     "search_volume": {
       "type": "integer"
@@ -54,12 +44,6 @@
     "heading": {
       "type": "string"
     },
-    "keywords": {
-      "type": "json"
-    },
-    "position": {
-      "type": "float"
-    },
     "redirect": {
       "type": "string"
     },
@@ -68,6 +52,9 @@
     },
     "impressions": {
       "type": "integer"
+    },
+    "keywords": {
+      "type": "json"
     }
   }
 }

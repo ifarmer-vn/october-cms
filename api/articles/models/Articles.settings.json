@@ -42,14 +42,8 @@
     "search_volume": {
       "type": "integer"
     },
-    "click": {
-      "type": "integer"
-    },
     "ctr": {
       "type": "float"
-    },
-    "impression": {
-      "type": "integer"
     },
     "name": {
       "type": "string"
@@ -89,6 +83,12 @@
     },
     "position": {
       "type": "float"
+    },
+    "clicks": {
+      "type": "integer"
+    },
+    "impressions": {
+      "type": "integer"
     }
   }
 }

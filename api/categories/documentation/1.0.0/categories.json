@@ -588,14 +588,8 @@
             "type": "integer",
             "default": "0"
           },
-          "click": {
-            "type": "integer"
-          },
           "ctr": {
             "type": "number"
-          },
-          "impression": {
-            "type": "integer"
           },
           "content": {
             "type": "string"
@@ -617,6 +611,12 @@
           },
           "name": {
             "type": "string"
+          },
+          "clicks": {
+            "type": "integer"
+          },
+          "impressions": {
+            "type": "integer"
           }
         }
       },
@@ -647,14 +647,8 @@
             "type": "integer",
             "default": "0"
           },
-          "click": {
-            "type": "integer"
-          },
           "ctr": {
             "type": "number"
-          },
-          "impression": {
-            "type": "integer"
           },
           "content": {
             "type": "string"
@@ -676,6 +670,12 @@
           },
           "name": {
             "type": "string"
+          },
+          "clicks": {
+            "type": "integer"
+          },
+          "impressions": {
+            "type": "integer"
           }
         }
       }
