@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/contents": {
+    "/orders": {
       "get": {
         "deprecated": false,
-        "description": "Find all the contents's records",
+        "description": "Find all the orders's records",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve orders document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contents"
+                    "$ref": "#/components/schemas/Orders"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Orders"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new contents record",
+        "description": "Create a new orders record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve orders document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Orders"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Orders"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContents"
+                "$ref": "#/components/schemas/NewOrders"
               }
             }
           }
         }
       }
     },
-    "/contents/count": {
+    "/orders/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of contents documents",
+        "description": "Retrieve the numver of orders documents",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve orders document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Orders"
         ],
         "parameters": []
       }
     },
-    "/contents/{_id}": {
+    "/orders/{_id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one contents record",
+        "description": "Find one orders record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve orders document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Orders"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Orders"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single contents record",
+        "description": "Update a single orders record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve orders document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Orders"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Orders"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContents"
+                "$ref": "#/components/schemas/NewOrders"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single contents record",
+        "description": "Delete a single orders record",
         "responses": {
           "200": {
-            "description": "deletes a single contents based on the ID supplied",
+            "description": "deletes a single orders based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Orders"
         ],
         "parameters": [
           {
@@ -508,152 +508,112 @@
   },
   "components": {
     "schemas": {
-      "Contents": {
+      "Orders": {
         "required": [
-          "id"
+          "id",
+          "customerID",
+          "status"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "url": {
+          "customerID": {
             "type": "string"
           },
-          "disable": {
-            "type": "boolean"
-          },
-          "title": {
-            "type": "string"
-          },
-          "images": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "public_id": {
-                "type": "string"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "robots": {
-            "type": "string"
-          },
-          "search_volume": {
+          "totalPrice": {
             "type": "integer"
           },
-          "ctr": {
-            "type": "number"
-          },
-          "name": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "heading": {
-            "type": "string"
-          },
-          "redirect": {
-            "type": "string"
-          },
-          "clicks": {
+          "shippingFee": {
             "type": "integer"
           },
-          "impressions": {
-            "type": "integer"
+          "status": {
+            "type": "string",
+            "enum": [
+              "dang-cho",
+              "da-check",
+              "dang-ship-hang",
+              "da-gui-xe",
+              "da-nhan",
+              "hoan-tat",
+              "da-huy-hon",
+              "khong-check-duoc",
+              "bom-hang",
+              "no-tien"
+            ]
           },
-          "keywords": {
+          "pagementType": {
+            "type": "string",
+            "default": "tien-mat",
+            "enum": [
+              "tien-mat",
+              "chuyen-khoan",
+              "thu-ho"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          },
+          "customer": {
             "type": "json"
           },
-          "test11": {
+          "orderdetail": {
+            "type": "json"
+          },
+          "product": {
             "type": "string"
           }
         }
       },
-      "NewContents": {
+      "NewOrders": {
+        "required": [
+          "customerID",
+          "status"
+        ],
         "properties": {
-          "url": {
+          "customerID": {
             "type": "string"
           },
-          "disable": {
-            "type": "boolean"
-          },
-          "title": {
-            "type": "string"
-          },
-          "robots": {
-            "type": "string"
-          },
-          "search_volume": {
+          "totalPrice": {
             "type": "integer"
           },
-          "ctr": {
-            "type": "number"
-          },
-          "name": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "heading": {
-            "type": "string"
-          },
-          "redirect": {
-            "type": "string"
-          },
-          "clicks": {
+          "shippingFee": {
             "type": "integer"
           },
-          "impressions": {
-            "type": "integer"
+          "status": {
+            "type": "string",
+            "enum": [
+              "dang-cho",
+              "da-check",
+              "dang-ship-hang",
+              "da-gui-xe",
+              "da-nhan",
+              "hoan-tat",
+              "da-huy-hon",
+              "khong-check-duoc",
+              "bom-hang",
+              "no-tien"
+            ]
           },
-          "keywords": {
+          "pagementType": {
+            "type": "string",
+            "default": "tien-mat",
+            "enum": [
+              "tien-mat",
+              "chuyen-khoan",
+              "thu-ho"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          },
+          "customer": {
             "type": "json"
           },
-          "test11": {
+          "orderdetail": {
+            "type": "json"
+          },
+          "product": {
             "type": "string"
           }
         }
@@ -662,7 +622,7 @@
   },
   "tags": [
     {
-      "name": "Contents"
+      "name": "Orders"
     }
   ]
 }

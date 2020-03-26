@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/contents": {
+    "/customers": {
       "get": {
         "deprecated": false,
-        "description": "Find all the contents's records",
+        "description": "Find all the customers's records",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contents"
+                    "$ref": "#/components/schemas/Customers"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Customers"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new contents record",
+        "description": "Create a new customers record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Customers"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContents"
+                "$ref": "#/components/schemas/NewCustomers"
               }
             }
           }
         }
       }
     },
-    "/contents/count": {
+    "/customers/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of contents documents",
+        "description": "Retrieve the numver of customers documents",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Customers"
         ],
         "parameters": []
       }
     },
-    "/contents/{_id}": {
+    "/customers/{_id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one contents record",
+        "description": "Find one customers record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Customers"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single contents record",
+        "description": "Update a single customers record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve customers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Customers"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Customers"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContents"
+                "$ref": "#/components/schemas/NewCustomers"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single contents record",
+        "description": "Delete a single customers record",
         "responses": {
           "200": {
-            "description": "deletes a single contents based on the ID supplied",
+            "description": "deletes a single customers based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Customers"
         ],
         "parameters": [
           {
@@ -508,7 +508,7 @@
   },
   "components": {
     "schemas": {
-      "Contents": {
+      "Customers": {
         "required": [
           "id"
         ],
@@ -516,144 +516,98 @@
           "id": {
             "type": "string"
           },
-          "url": {
+          "phone": {
             "type": "string"
           },
-          "disable": {
-            "type": "boolean"
-          },
-          "title": {
+          "address": {
             "type": "string"
           },
-          "images": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "public_id": {
-                "type": "string"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "robots": {
+          "address2": {
             "type": "string"
           },
-          "search_volume": {
-            "type": "integer"
+          "email": {
+            "type": "string"
           },
-          "ctr": {
-            "type": "number"
+          "status": {
+            "type": "string",
+            "enum": [
+              "moi",
+              "da-mua-hang-roi",
+              "bom-hang",
+              "khong-lien-lac-duoc"
+            ]
+          },
+          "location": {
+            "type": "string"
           },
           "name": {
             "type": "string"
           },
-          "content": {
+          "gender": {
+            "type": "string",
+            "default": "nu",
+            "enum": [
+              "nam",
+              "nu",
+              "khong-xac-dinh"
+            ]
+          },
+          "provider": {
             "type": "string"
           },
-          "description": {
+          "picture": {
             "type": "string"
           },
-          "heading": {
-            "type": "string"
-          },
-          "redirect": {
-            "type": "string"
-          },
-          "clicks": {
-            "type": "integer"
-          },
-          "impressions": {
-            "type": "integer"
-          },
-          "keywords": {
-            "type": "json"
-          },
-          "test11": {
+          "customer_id": {
             "type": "string"
           }
         }
       },
-      "NewContents": {
+      "NewCustomers": {
         "properties": {
-          "url": {
+          "phone": {
             "type": "string"
           },
-          "disable": {
-            "type": "boolean"
-          },
-          "title": {
+          "address": {
             "type": "string"
           },
-          "robots": {
+          "address2": {
             "type": "string"
           },
-          "search_volume": {
-            "type": "integer"
+          "email": {
+            "type": "string"
           },
-          "ctr": {
-            "type": "number"
+          "status": {
+            "type": "string",
+            "enum": [
+              "moi",
+              "da-mua-hang-roi",
+              "bom-hang",
+              "khong-lien-lac-duoc"
+            ]
+          },
+          "location": {
+            "type": "string"
           },
           "name": {
             "type": "string"
           },
-          "content": {
+          "gender": {
+            "type": "string",
+            "default": "nu",
+            "enum": [
+              "nam",
+              "nu",
+              "khong-xac-dinh"
+            ]
+          },
+          "provider": {
             "type": "string"
           },
-          "description": {
+          "picture": {
             "type": "string"
           },
-          "heading": {
-            "type": "string"
-          },
-          "redirect": {
-            "type": "string"
-          },
-          "clicks": {
-            "type": "integer"
-          },
-          "impressions": {
-            "type": "integer"
-          },
-          "keywords": {
-            "type": "json"
-          },
-          "test11": {
+          "customer_id": {
             "type": "string"
           }
         }
@@ -662,7 +616,7 @@
   },
   "tags": [
     {
-      "name": "Contents"
+      "name": "Customers"
     }
   ]
 }

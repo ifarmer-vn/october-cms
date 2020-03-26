@@ -1,0 +1,61 @@
+{
+  "connection": "default",
+  "collectionName": "customers",
+  "info": {
+    "name": "customers",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "address2": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    },
+    "status": {
+      "enum": [
+        "moi",
+        "da-mua-hang-roi",
+        "bom-hang",
+        "khong-lien-lac-duoc"
+      ],
+      "type": "enumeration"
+    },
+    "location": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "gender": {
+      "enum": [
+        "nam",
+        "nu",
+        "khong-xac-dinh"
+      ],
+      "default": "nu",
+      "type": "enumeration"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    }
+  }
+}

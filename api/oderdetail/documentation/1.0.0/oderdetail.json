@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/contents": {
+    "/oderdetails": {
       "get": {
         "deprecated": false,
-        "description": "Find all the contents's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contents"
+                    "$ref": "#/components/schemas/Oderdetail"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Oderdetail"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new contents record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Oderdetail"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Oderdetail"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContents"
+                "$ref": "#/components/schemas/NewOderdetail"
               }
             }
           }
         }
       }
     },
-    "/contents/count": {
+    "/oderdetails/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of contents documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Oderdetail"
         ],
         "parameters": []
       }
     },
-    "/contents/{_id}": {
+    "/oderdetails/{_id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one contents record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Oderdetail"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Oderdetail"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single contents record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Oderdetail"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Oderdetail"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContents"
+                "$ref": "#/components/schemas/NewOderdetail"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single contents record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single contents based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Oderdetail"
         ],
         "parameters": [
           {
@@ -508,7 +508,7 @@
   },
   "components": {
     "schemas": {
-      "Contents": {
+      "Oderdetail": {
         "required": [
           "id"
         ],
@@ -516,144 +516,38 @@
           "id": {
             "type": "string"
           },
-          "url": {
+          "orderID": {
             "type": "string"
           },
-          "disable": {
-            "type": "boolean"
-          },
-          "title": {
+          "variantURL": {
             "type": "string"
           },
-          "images": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "public_id": {
-                "type": "string"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "robots": {
-            "type": "string"
-          },
-          "search_volume": {
+          "quantity": {
             "type": "integer"
           },
-          "ctr": {
-            "type": "number"
-          },
-          "name": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "heading": {
-            "type": "string"
-          },
-          "redirect": {
-            "type": "string"
-          },
-          "clicks": {
+          "price": {
             "type": "integer"
           },
-          "impressions": {
-            "type": "integer"
-          },
-          "keywords": {
-            "type": "json"
-          },
-          "test11": {
+          "note": {
             "type": "string"
           }
         }
       },
-      "NewContents": {
+      "NewOderdetail": {
         "properties": {
-          "url": {
+          "orderID": {
             "type": "string"
           },
-          "disable": {
-            "type": "boolean"
-          },
-          "title": {
+          "variantURL": {
             "type": "string"
           },
-          "robots": {
-            "type": "string"
-          },
-          "search_volume": {
+          "quantity": {
             "type": "integer"
           },
-          "ctr": {
-            "type": "number"
-          },
-          "name": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "heading": {
-            "type": "string"
-          },
-          "redirect": {
-            "type": "string"
-          },
-          "clicks": {
+          "price": {
             "type": "integer"
           },
-          "impressions": {
-            "type": "integer"
-          },
-          "keywords": {
-            "type": "json"
-          },
-          "test11": {
+          "note": {
             "type": "string"
           }
         }
@@ -662,7 +556,7 @@
   },
   "tags": [
     {
-      "name": "Contents"
+      "name": "Oderdetail"
     }
   ]
 }

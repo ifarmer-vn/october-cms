@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "contents",
   "info": {
     "name": "contents",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "url": {
@@ -55,6 +58,9 @@
     },
     "keywords": {
       "type": "json"
+    },
+    "test11": {
+      "type": "string"
     }
   }
 }

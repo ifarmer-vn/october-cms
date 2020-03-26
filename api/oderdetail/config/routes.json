@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/oderdetails",
+      "handler": "Oderdetail.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/oderdetails/count",
+      "handler": "Oderdetail.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/oderdetails/:_id",
+      "handler": "Oderdetail.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/oderdetails",
+      "handler": "Oderdetail.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/oderdetails/:_id",
+      "handler": "Oderdetail.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/oderdetails/:_id",
+      "handler": "Oderdetail.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

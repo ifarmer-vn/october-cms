@@ -1,0 +1,63 @@
+{
+  "connection": "default",
+  "collectionName": "orders",
+  "info": {
+    "name": "orders",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "customerID": {
+      "type": "string",
+      "required": true
+    },
+    "totalPrice": {
+      "type": "integer"
+    },
+    "shippingFee": {
+      "type": "integer"
+    },
+    "status": {
+      "enum": [
+        "dang-cho",
+        "da-check",
+        "dang-ship-hang",
+        "da-gui-xe",
+        "da-nhan",
+        "hoan-tat",
+        "da-huy-hon",
+        "khong-check-duoc",
+        "bom-hang",
+        "no-tien"
+      ],
+      "type": "enumeration",
+      "required": true
+    },
+    "pagementType": {
+      "enum": [
+        "tien-mat",
+        "chuyen-khoan",
+        "thu-ho"
+      ],
+      "type": "enumeration",
+      "default": "tien-mat"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "customer": {
+      "type": "json"
+    },
+    "orderdetail": {
+      "type": "json"
+    },
+    "product": {
+      "type": "string"
+    }
+  }
+}
