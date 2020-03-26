@@ -30,7 +30,7 @@
       "type": "string"
     },
     "images": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "plugin": "upload"
     },
@@ -83,6 +83,12 @@
     },
     "impressions": {
       "type": "integer"
+    },
+    "transformedImages": {
+      "type": "json"
+    },
+    "enableOrder": {
+      "type": "boolean"
     }
   }
 }

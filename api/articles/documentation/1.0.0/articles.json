@@ -616,9 +616,6 @@
           "next": {
             "type": "string"
           },
-          "prev": {
-            "type": "string"
-          },
           "propagated_urls": {
             "type": "json"
           },
@@ -636,6 +633,9 @@
           },
           "impressions": {
             "type": "integer"
+          },
+          "transformedImages": {
+            "type": "json"
           }
         }
       },
@@ -694,9 +694,6 @@
           "next": {
             "type": "string"
           },
-          "prev": {
-            "type": "string"
-          },
           "propagated_urls": {
             "type": "json"
           },
@@ -714,6 +711,9 @@
           },
           "impressions": {
             "type": "integer"
+          },
+          "transformedImages": {
+            "type": "json"
           }
         }
       }

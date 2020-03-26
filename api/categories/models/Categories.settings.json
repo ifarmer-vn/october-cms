@@ -70,6 +70,9 @@
     },
     "impressions": {
       "type": "integer"
+    },
+    "transformedImages": {
+      "type": "json"
     }
   }
 }

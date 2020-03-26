@@ -1,0 +1,4 @@
+
+"uri": "mongodb+srv://buihoanghai:123412@ifarmer-cms-wkfbo.mongodb.net/test?retryWrites=true&w=majority"
+
+"uri": "mongodb+srv://buihoanghai:123412@cluster0-9lfbx.mongodb.net/test?retryWrites=true&w=majority"

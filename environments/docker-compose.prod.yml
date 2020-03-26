@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+
+  cms:
+    build: ./
+    container_name: "cms_prod"
+    volumes:
+      - ./:/var/www/ifarmer
+      - ./node_modules:/var/www/ifarmer/node_modules
+    ports:
+      - "1337:1337"
+    networks:
+      - cms
+    command: "npm run develop"
+
+networks:
+  cms:
+    driver: bridge
