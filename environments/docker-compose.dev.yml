@@ -12,7 +12,7 @@ services:
       - "1337:1337"
     networks:
       - cms
-    command: "pm2 start --no-daemon ecosystem.config.js -i 1"
+    command: "npm run develop"
 
 networks:
   cms:
