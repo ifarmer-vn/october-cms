@@ -562,6 +562,15 @@
           },
           "product": {
             "type": "string"
+          },
+          "productName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "timeOrder": {
+            "type": "string"
           }
         }
       },
@@ -614,6 +623,15 @@
             "type": "json"
           },
           "product": {
+            "type": "string"
+          },
+          "productName": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "timeOrder": {
             "type": "string"
           }
         }

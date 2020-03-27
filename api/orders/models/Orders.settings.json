@@ -58,6 +58,15 @@
     },
     "product": {
       "type": "string"
+    },
+    "productName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "timeOrder": {
+      "type": "string"
     }
   }
 }
