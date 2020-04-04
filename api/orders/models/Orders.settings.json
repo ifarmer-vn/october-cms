@@ -67,6 +67,12 @@
     },
     "timeOrder": {
       "type": "string"
+    },
+    "gia-nhap": {
+      "type": "integer"
+    },
+    "tong-tien": {
+      "type": "integer"
     }
   }
 }

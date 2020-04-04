@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/27/2020 6:08:42 AM"
+    "x-generation-date": "04/04/2020 4:23:15 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8582,6 +8582,12 @@
           },
           "timeOrder": {
             "type": "string"
+          },
+          "gia-nhap": {
+            "type": "integer"
+          },
+          "tong-tien": {
+            "type": "integer"
           }
         }
       },
@@ -8644,6 +8650,12 @@
           },
           "timeOrder": {
             "type": "string"
+          },
+          "gia-nhap": {
+            "type": "integer"
+          },
+          "tong-tien": {
+            "type": "integer"
           }
         }
       },
