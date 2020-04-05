@@ -1,0 +1,62 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "suppliers",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "product-name": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "created-date": {
+      "type": "date"
+    },
+    "videos": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "status": {
+      "enum": [
+        "con-hang",
+        "het-hang",
+        "chuan-bi-thu-hoach",
+        ""
+      ],
+      "type": "enumeration"
+    },
+    "description": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}
