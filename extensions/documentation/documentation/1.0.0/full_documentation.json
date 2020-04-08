@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/05/2020 4:38:09 PM"
+    "x-generation-date": "04/08/2020 6:03:33 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9055,7 +9055,9 @@
               "da-huy-hon",
               "khong-check-duoc",
               "bom-hang",
-              "no-tien"
+              "no-tien",
+              "giao-dai-ly",
+              "khach-huy-don"
             ]
           },
           "pagementType": {
@@ -9123,7 +9125,9 @@
               "da-huy-hon",
               "khong-check-duoc",
               "bom-hang",
-              "no-tien"
+              "no-tien",
+              "giao-dai-ly",
+              "khach-huy-don"
             ]
           },
           "pagementType": {

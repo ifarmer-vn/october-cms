@@ -33,7 +33,9 @@
         "da-huy-hon",
         "khong-check-duoc",
         "bom-hang",
-        "no-tien"
+        "no-tien",
+        "giao-dai-ly",
+        "khach-huy-don"
       ],
       "type": "enumeration",
       "required": true
