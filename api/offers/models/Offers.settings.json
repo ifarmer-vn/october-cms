@@ -1,0 +1,76 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "offers",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "producturl": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "sanluong": {
+      "type": "string"
+    },
+    "thoigianthuhoach": {
+      "type": "string"
+    },
+    "loaihinh": {
+      "enum": [
+        "nha-vuon",
+        "nong-trai",
+        "trang-trai",
+        "nguoi-chan-nuoi",
+        "cua-hang",
+        "thu-mua",
+        "khac"
+      ],
+      "type": "enumeration",
+      "default": "nha-vuon"
+    },
+    "loaihinhkhac": {
+      "type": "string"
+    },
+    "chungnhan": {
+      "type": "text"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "loaiban": {
+      "default": "le",
+      "enum": [
+        "le",
+        "si",
+        "toan-bo-hang"
+      ],
+      "type": "enumeration"
+    },
+    "dieukienban": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

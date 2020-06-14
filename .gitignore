@@ -116,3 +116,6 @@ coverage
 exports
 .cache
 #build
+docker-compose.yml
+Dockerfile
+build
